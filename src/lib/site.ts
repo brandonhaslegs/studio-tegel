@@ -7,9 +7,9 @@ export const images = {
 };
 
 export const projects = [
-  { title: "Tegel Collection", type: "Limited furniture series", image: images.hero, slug: "tegel-collection" },
-  { title: "Built to Belong", type: "Bespoke storage", image: images.storage, slug: "built-to-belong" },
-  { title: "Second Structure", type: "Modular interiors", image: images.modular, slug: "second-structure" },
+  { title: "Tegel Kollektion", type: "Limitierte Möbelserie", image: images.hero, slug: "tegel-kollektion" },
+  { title: "Für den Raum gemacht", type: "Maßgefertigter Stauraum", image: images.storage, slug: "fuer-den-raum-gemacht" },
+  { title: "Zweite Struktur", type: "Modulare Innenräume", image: images.modular, slug: "zweite-struktur" },
 ];
 
 export const projectBySlug = Object.fromEntries(projects.map((project) => [project.slug, project]));
