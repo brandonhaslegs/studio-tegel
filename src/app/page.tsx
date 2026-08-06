@@ -22,12 +22,11 @@ export default function Home() {
     </section>
 
     <section className="px-4 pb-24 md:px-8 md:pb-40">
-      <div className="mb-8 flex items-end justify-between border-t border-line pt-3"><p className="eyebrow">Referenzen</p><Link className="text-link" href="/projects">Alle Projekte</Link></div>
+      <div className="mb-8 border-t border-line pt-3"><p className="eyebrow">Referenzen</p></div>
       <div className="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2">
-        <Reveal><ProjectCard project={projects[0]} priority /></Reveal>
-        <Reveal delay={0.1} className="md:mt-32"><ProjectCard project={projects[1]} /></Reveal>
-        <Reveal className="md:col-span-1 md:col-start-2"><ProjectCard project={projects[2]} /></Reveal>
+        {projects.slice(0, 4).map((project, index) => <ProjectCard key={project.slug} priority={index === 0} project={project} />)}
       </div>
+      <Link className="text-link mt-12" href="/projects">Mehr Projekte ansehen</Link>
     </section>
 
     <section className="bg-[#d4ccc0] py-24 md:py-40">
