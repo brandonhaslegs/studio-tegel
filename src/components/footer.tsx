@@ -7,6 +7,6 @@ export function Footer() {
       <div className="col-span-1 md:col-start-7 md:col-span-3"><p className="eyebrow mb-3 text-paper/50">Besuch</p><p className="text-sm leading-relaxed">Berlin, Deutschland<br />Nach Vereinbarung</p></div>
       <div className="col-span-1 md:col-span-3"><p className="eyebrow mb-3 text-paper/50">Kontakt</p><a className="text-sm underline underline-offset-4" href="mailto:hallo@studiotegel.de">hallo@studiotegel.de</a></div>
     </div>
-    <div className="mt-24 flex items-end justify-between border-t border-paper/20 pt-4"><Link href="/" className="text-[0.82rem] font-medium tracking-[-0.045em]">STUDIO TEGEL</Link><p className="eyebrow text-paper/50">© 2026</p></div>
+    <div className="mt-24 flex items-end justify-between border-t border-paper/20 pt-4"><Link href="/" className="text-[0.82rem] font-medium tracking-[-0.045em]">STUDIO TEGEL</Link><div className="flex gap-4"><Link className="eyebrow text-paper/50" href="/agb">AGB</Link><Link className="eyebrow text-paper/50" href="/datenschutz">Datenschutz</Link><p className="eyebrow text-paper/50">© 2026</p></div></div>
   </footer>;
 }
