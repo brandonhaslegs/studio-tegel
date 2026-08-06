@@ -20,7 +20,7 @@ export function Navigation() {
       <AnimatePresence>
         {open && <motion.div id="mobile-navigation" initial={{ opacity: 0, clipPath: "inset(0 0 100% 0)" }} animate={{ opacity: 1, clipPath: "inset(0 0 0% 0)" }} exit={{ opacity: 0, clipPath: "inset(0 0 100% 0)" }} transition={{ duration: 0.35, ease: [0.2, 0.65, 0.2, 1] }} className="fixed inset-0 z-0 flex min-h-svh flex-col bg-paper px-4 pb-8 pt-24 text-ink">
           <div className="flex flex-col gap-1">{links.map((link, index) => <Link onClick={() => setOpen(false)} className="display-medium border-t border-line py-2" href={link.href} key={link.href}><span className="mr-3 align-top font-sans text-[0.65rem] tracking-normal">0{index + 1}</span>{link.label}</Link>)}</div>
-          <div className="mt-auto flex items-end justify-between border-t border-line pt-4"><p className="eyebrow max-w-[14ch] text-stone">Maßgefertigte Innenräume und Möbel aus Berlin.</p><a className="eyebrow underline underline-offset-4" href="mailto:hallo@studiotegel.de">E-Mail</a></div>
+          <div className="mt-auto flex items-end justify-between border-t border-line pt-4"><p className="eyebrow max-w-[14ch] text-stone">Maßgefertigte Innenräume und Möbel aus Berlin.</p><div className="flex flex-col items-end gap-2"><a className="eyebrow underline underline-offset-4" href="mailto:team@studiotegel.de">E-Mail</a><a className="eyebrow underline underline-offset-4" href="https://www.instagram.com/studio_tegel/" rel="noreferrer" target="_blank">Instagram</a></div></div>
         </motion.div>}
       </AnimatePresence>
     </header>
