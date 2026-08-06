@@ -30,8 +30,7 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="px-4 pb-24 pt-24 md:px-8 md:pb-40 md:pt-40">
-      <div className="mb-8 border-t border-line pt-3"><p className="eyebrow">Referenzen</p></div>
+    <section className="px-4 pb-24 md:px-8 md:pb-40">
       <div className="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2">
         {projects.slice(0, 4).map((project, index) => <ProjectCard key={project.slug} priority={index === 0} project={project} />)}
       </div>
