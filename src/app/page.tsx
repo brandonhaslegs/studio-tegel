@@ -35,7 +35,7 @@ export default function Home() {
       <div className="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2">
         {projects.slice(0, 4).map((project, index) => <ProjectCard key={project.slug} priority={index === 0} project={project} />)}
       </div>
-      <Link className="text-link mt-12" href="/projects">Mehr Projekte ansehen</Link>
+      <Link className="display-medium mt-16 inline-block border-b border-ink pb-2" href="/projects">Mehr Projekte ansehen.</Link>
     </section>
 
     <section className="page-grid py-24 md:py-40">
