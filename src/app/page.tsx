@@ -21,12 +21,6 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="page-grid py-24 md:py-40">
-      <Reveal className="col-span-12 md:col-span-2"><p className="eyebrow">01 / Das Studio</p></Reveal>
-      <Reveal delay={0.08} className="col-span-12 mt-10 md:col-span-8 md:col-start-4 md:mt-0"><h2 className="display-medium">Wir sind kreative Planer*innen, Architekt*innen und Tischler*innen.</h2></Reveal>
-      <Reveal delay={0.16} className="col-span-12 mt-16 md:col-span-3 md:col-start-9"><p className="text-sm leading-[1.55] text-charcoal">Wir hinterfragen herkömmliche Produktionsprozesse und setzen bereits im Designprozess neue, ressourcenschonende Maßstäbe.</p></Reveal>
-    </section>
-
     <section className="px-4 pb-24 md:px-8 md:pb-40">
       <div className="mb-8 flex items-end justify-between border-t border-line pt-3"><p className="eyebrow">Referenzen</p><Link className="text-link" href="/projects">Alle Projekte</Link></div>
       <div className="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2">
