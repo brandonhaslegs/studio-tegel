@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import { Footer } from "@/components/footer";
 import { PageIntro } from "@/components/page-intro";
@@ -7,6 +8,7 @@ const services = [
   {
     number: "01",
     title: "Maßgefertigte Möbel",
+    image: "/images/legacy/a0a45705-110c-4ca7-9cbc-43707a39c878-IMG_5009.jpg",
     intro: "Stauraum gefällig? Dann bist du bei uns genau richtig.",
     items: [
       "Schrankwände, Regale, Sideboards und Kommoden für den Wohnbereich",
@@ -18,12 +20,14 @@ const services = [
   {
     number: "02",
     title: "TXL-Kollektion",
+    image: "/images/legacy/14ecc64b-d303-4f98-be8a-37acdceafe38-IMG_4950.jpg",
     intro: "Hol dir ein Stück TXL zu dir nach Hause.",
     copy: "Aus geretteten Baumaterialien des ehemaligen Flughafens Tegel bauen wir einzigartige Möbelunikate in limitierter Stückzahl. Ein Produktkatalog der TXL-Kollektion folgt in Kürze. Bis dahin gilt: nur solange der Vorrat reicht.",
   },
   {
     number: "03",
     title: "Upcycling-Workshops",
+    image: "/images/legacy/8d0444fd-10c2-4a04-ae7a-7da8c7128a42-Individuelle-Einzigartige-Ma%C3%9Fgefertigte-Kunstwerke-aus-Holz-Studio-Tegel.JPG",
     intro: "Du hast Freude am Designen und Bauen? Dann melde dich für unseren Workshop an.",
     copy: "Unter professioneller Anleitung entstehen aus Holzresten unserer Tischlerei eigene Kunstwerke.",
     items: [
@@ -37,6 +41,7 @@ const services = [
   {
     number: "04",
     title: "Werkstattnutzung",
+    image: "/images/legacy/71635163-9234-4086-ac55-0587834ce272-IMG_4116.jpg",
     intro: "Du suchst eine Holzwerkstatt zur gemeinsamen Nutzung? Dann miete dich gerne bei uns mit ein.",
   },
 ];
@@ -55,6 +60,9 @@ export default function ServicesPage() {
                 <h2 className="text-3xl tracking-[-0.02em] md:text-4xl">{service.title}</h2>
               </div>
               <div className="col-span-7 col-start-2 space-y-5 text-sm leading-relaxed text-charcoal/80 md:col-span-3 md:col-start-6">
+                <div className="image-frame relative aspect-[5/4] overflow-hidden">
+                  <Image src={service.image} alt={service.title} fill sizes="(max-width: 768px) 80vw, 25vw" className="object-cover" />
+                </div>
                 <p>{service.intro}</p>
                 {service.copy && <p>{service.copy}</p>}
                 {service.items && (
