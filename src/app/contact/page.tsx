@@ -4,7 +4,7 @@ import { PageIntro } from "@/components/page-intro";
 export default function ContactPage() {
   return (
     <main>
-      <PageIntro eyebrow="Kontakt" title="Lass uns ins Gespräch kommen.">
+      <PageIntro compact eyebrow="Kontakt" title="Lass uns ins Gespräch kommen.">
         Du möchtest ein Bauprojekt mit uns umsetzen, einen Workshop buchen oder dich in unserer Werkstatt mit einmieten? Dann schreib uns oder fülle das Formular aus. Wir freuen uns auf dich.
       </PageIntro>
 
