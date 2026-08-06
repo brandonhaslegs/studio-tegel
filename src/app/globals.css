@@ -9,6 +9,38 @@
   --wood: #9a7356;
 }
 
+@font-face {
+  font-family: "Google Sans Flex";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/google-sans-flex-1.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Google Sans Flex";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/google-sans-flex-2.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Google Sans Flex";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/google-sans-flex-3.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Google Sans Flex";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/google-sans-flex-4.ttf") format("truetype");
+}
+
 @theme inline {
   --color-paper: var(--paper);
   --color-ink: var(--ink);
@@ -16,8 +48,7 @@
   --color-stone: var(--stone);
   --color-line: var(--line);
   --color-wood: var(--wood);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: "Google Sans Flex", Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -28,7 +59,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Google Sans Flex", Arial, sans-serif;
 }
 
 ::selection { background: var(--ink); color: var(--paper); }
