@@ -9,8 +9,8 @@ const links = [{ label: "Projects", href: "/projects" }, { label: "Studio", href
 export function Navigation() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="fixed inset-x-0 top-0 z-50 mix-blend-multiply">
-      <nav className="flex items-center justify-between px-4 py-4 md:px-8 md:py-6" aria-label="Main navigation">
+    <header className="fixed inset-x-0 top-0 z-50 text-ink">
+      <nav className="relative z-10 flex items-center justify-between px-4 py-4 md:px-8 md:py-6" aria-label="Main navigation">
         <Link href="/" className="text-[0.82rem] font-medium tracking-[-0.045em]">STUDIO TEGEL</Link>
         <div className="hidden items-center gap-7 md:flex">
           {links.map((link) => <Link className="eyebrow transition-opacity hover:opacity-50" href={link.href} key={link.href}>{link.label}</Link>)}
@@ -18,8 +18,9 @@ export function Navigation() {
         <button className="eyebrow md:hidden" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="mobile-navigation">{open ? "Close" : "Menu"}</button>
       </nav>
       <AnimatePresence>
-        {open && <motion.div id="mobile-navigation" initial={{ opacity: 0, clipPath: "inset(0 0 100% 0)" }} animate={{ opacity: 1, clipPath: "inset(0 0 0% 0)" }} exit={{ opacity: 0, clipPath: "inset(0 0 100% 0)" }} transition={{ duration: 0.35 }} className="absolute inset-x-0 top-0 -z-10 bg-paper px-4 pb-10 pt-20">
-          <div className="flex flex-col gap-3">{links.map((link) => <Link onClick={() => setOpen(false)} className="display-medium" href={link.href} key={link.href}>{link.label}</Link>)}</div>
+        {open && <motion.div id="mobile-navigation" initial={{ opacity: 0, clipPath: "inset(0 0 100% 0)" }} animate={{ opacity: 1, clipPath: "inset(0 0 0% 0)" }} exit={{ opacity: 0, clipPath: "inset(0 0 100% 0)" }} transition={{ duration: 0.35, ease: [0.2, 0.65, 0.2, 1] }} className="fixed inset-0 z-0 flex min-h-svh flex-col bg-paper px-4 pb-8 pt-24 text-ink">
+          <div className="flex flex-col gap-1">{links.map((link, index) => <Link onClick={() => setOpen(false)} className="display-medium border-t border-line py-2" href={link.href} key={link.href}><span className="mr-3 align-top font-sans text-[0.65rem] tracking-normal">0{index + 1}</span>{link.label}</Link>)}</div>
+          <div className="mt-auto flex items-end justify-between border-t border-line pt-4"><p className="eyebrow max-w-[14ch] text-stone">Bespoke interiors and furniture, made in Berlin.</p><a className="eyebrow underline underline-offset-4" href="mailto:hallo@studiotegel.de">Email us</a></div>
         </motion.div>}
       </AnimatePresence>
     </header>
