@@ -21,14 +21,6 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="px-4 pb-24 md:px-8 md:pb-40">
-      <div className="mb-8 border-t border-line pt-3"><p className="eyebrow">Referenzen</p></div>
-      <div className="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2">
-        {projects.slice(0, 4).map((project, index) => <ProjectCard key={project.slug} priority={index === 0} project={project} />)}
-      </div>
-      <Link className="text-link mt-12" href="/projects">Mehr Projekte ansehen</Link>
-    </section>
-
     <section className="bg-[#d4ccc0] py-24 md:py-40">
       <div className="page-grid">
         <div className="col-span-12 border-t border-black/15 pt-3 md:col-span-2"><p className="eyebrow">Leistungen</p></div>
@@ -36,6 +28,14 @@ export default function Home() {
           {[["01", "Möbel & Stauraum", "Schrankwände, Regale, Sideboards und Kommoden für den Wohnbereich."], ["02", "Raumspezifische Möbel", "Hochbetten, Hochebenen, Podeste und Raumtrenner, exakt für ihren Ort gemacht."], ["03", "Gewerbe & Gastronomie", "Ein- und Umbau von Büroräumen, Gewerbeflächen und Ladeneinrichtungen."]].map(([number, title, text]) => <div className="grid grid-cols-8 border-t border-black/15 py-5 first:border-t-0 first:pt-0" key={title}><span className="eyebrow col-span-1">{number}</span><h3 className="col-span-4 text-2xl tracking-[-0.02em] md:text-3xl">{title}</h3><p className="col-span-3 text-xs leading-relaxed text-charcoal/75">{text}</p></div>)}
         </div>
       </div>
+    </section>
+
+    <section className="px-4 pb-24 pt-24 md:px-8 md:pb-40 md:pt-40">
+      <div className="mb-8 border-t border-line pt-3"><p className="eyebrow">Referenzen</p></div>
+      <div className="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2">
+        {projects.slice(0, 4).map((project, index) => <ProjectCard key={project.slug} priority={index === 0} project={project} />)}
+      </div>
+      <Link className="text-link mt-12" href="/projects">Mehr Projekte ansehen</Link>
     </section>
 
     <section className="page-grid py-24 md:py-40">
