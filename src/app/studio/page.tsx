@@ -25,7 +25,7 @@ const principles = [
 export default function StudioPage() {
   return (
     <main>
-      <PageIntro compact label="Wer sind wir" title="Wir sind kreative Planer*innen, Architekt*innen und Tischler*innen.">
+      <PageIntro compact title="Wir sind kreative Planer*innen, Architekt*innen und Tischler*innen.">
         Wir hinterfragen herkömmliche Produktionsprozesse und setzen bereits im Designprozess neue, ressourcenschonende Maßstäbe.
       </PageIntro>
 

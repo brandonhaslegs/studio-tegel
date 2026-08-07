@@ -49,7 +49,7 @@ const services = [
 export default function ServicesPage() {
   return (
     <main>
-      <PageIntro compact label="Leistungen" title="Räume, Möbel und Dinge, die bleiben." />
+      <PageIntro compact title="Räume, Möbel und Dinge, die bleiben." />
 
       <section className="page-grid bg-paper py-24 md:py-40" aria-label="Leistungen im Überblick">
         <div className="col-span-12 md:col-span-8 md:col-start-4">
