@@ -126,8 +126,6 @@ a { color: inherit; text-decoration: none; }
 .text-link::after { content: "↗"; font-size: 1rem; line-height: 0.75; }
 
 .image-frame { overflow: hidden; background: #d6d1c8; }
-.image-frame img { transition: transform 900ms cubic-bezier(.2,.65,.2,1); }
-.image-frame:hover img { transform: scale(1.035); }
 
 @keyframes page-rise-in {
   from { opacity: 0; transform: translateY(14px); }
