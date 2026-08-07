@@ -93,7 +93,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (min-width: 768px) {
-  .headline { font-size: clamp(2.5rem, 4.8vw, 5.25rem); }
+  .headline { font-size: clamp(2.25rem, 4.32vw, 4.725rem); }
 }
 
 .nav-text {
