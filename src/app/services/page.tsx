@@ -56,20 +56,20 @@ export default function ServicesPage() {
           {services.map((service) => (
             <article className="grid grid-cols-8 gap-y-5 border-t border-ink/15 py-8 md:gap-y-8 md:py-10" key={service.number}>
               <p className="nav-text col-span-1">{service.number}</p>
-              <div className="col-span-7 md:col-span-4">
-                <h2 className="headline">{service.title}</h2>
-              </div>
-              <div className="project-copy col-span-7 col-start-2 space-y-5 text-ink/80 md:col-span-3 md:col-start-6">
+              <div className="col-span-7 col-start-2 space-y-5">
                 <div className="image-frame relative aspect-[5/4] overflow-hidden">
-                  <Image src={service.image} alt={service.title} fill sizes="(max-width: 768px) 80vw, 25vw" className="object-cover" />
+                  <Image src={service.image} alt={service.title} fill sizes="(max-width: 768px) 80vw, 58vw" className="object-cover" />
                 </div>
-                <p>{service.intro}</p>
-                {service.copy && <p>{service.copy}</p>}
-                {service.items && (
-                  <ul className="space-y-2 border-t border-ink/15 pt-4">
-                    {service.items.map((item) => <li key={item}>{item}</li>)}
-                  </ul>
-                )}
+                <h2 className="headline">{service.title}</h2>
+                <div className="project-copy space-y-5 text-ink/80">
+                  <p>{service.intro}</p>
+                  {service.copy && <p>{service.copy}</p>}
+                  {service.items && (
+                    <ul className="space-y-2 border-t border-ink/15 pt-4">
+                      {service.items.map((item) => <li key={item}>{item}</li>)}
+                    </ul>
+                  )}
+                </div>
               </div>
             </article>
           ))}
