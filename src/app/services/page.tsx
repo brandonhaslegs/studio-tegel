@@ -51,22 +51,22 @@ export default function ServicesPage() {
     <main>
       <PageIntro compact label="Leistungen" title="Räume, Möbel und Dinge, die bleiben." />
 
-      <section className="page-grid bg-[#d4ccc0] py-24 md:py-40" aria-label="Leistungen im Überblick">
+      <section className="page-grid bg-paper py-24 md:py-40" aria-label="Leistungen im Überblick">
         <div className="col-span-12 md:col-span-8 md:col-start-4">
           {services.map((service) => (
-            <article className="grid grid-cols-8 gap-y-5 border-t border-black/15 py-8 md:gap-y-8 md:py-10" key={service.number}>
+            <article className="grid grid-cols-8 gap-y-5 border-t border-ink/15 py-8 md:gap-y-8 md:py-10" key={service.number}>
               <p className="nav-text col-span-1">{service.number}</p>
               <div className="col-span-7 md:col-span-4">
                 <h2 className="headline">{service.title}</h2>
               </div>
-              <div className="project-copy col-span-7 col-start-2 space-y-5 text-charcoal/80 md:col-span-3 md:col-start-6">
+              <div className="project-copy col-span-7 col-start-2 space-y-5 text-ink/80 md:col-span-3 md:col-start-6">
                 <div className="image-frame relative aspect-[5/4] overflow-hidden">
                   <Image src={service.image} alt={service.title} fill sizes="(max-width: 768px) 80vw, 25vw" className="object-cover" />
                 </div>
                 <p>{service.intro}</p>
                 {service.copy && <p>{service.copy}</p>}
                 {service.items && (
-                  <ul className="space-y-2 border-t border-black/15 pt-4">
+                  <ul className="space-y-2 border-t border-ink/15 pt-4">
                     {service.items.map((item) => <li key={item}>{item}</li>)}
                   </ul>
                 )}

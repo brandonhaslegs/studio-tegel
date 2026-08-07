@@ -3,10 +3,7 @@
 :root {
   --paper: #f2f0eb;
   --ink: #171715;
-  --charcoal: #2c2b28;
-  --stone: #a6a299;
   --line: rgba(23, 23, 21, 0.18);
-  --wood: #9a7356;
 }
 
 @font-face {
@@ -52,10 +49,7 @@
 @theme inline {
   --color-paper: var(--paper);
   --color-ink: var(--ink);
-  --color-charcoal: var(--charcoal);
-  --color-stone: var(--stone);
   --color-line: var(--line);
-  --color-wood: var(--wood);
   --font-sans: "Google Sans Flex", Arial, sans-serif;
 }
 
@@ -113,7 +107,7 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.35;
 }
 
-.image-frame { overflow: hidden; background: #d6d1c8; }
+.image-frame { overflow: hidden; background: var(--paper); }
 
 @keyframes page-rise-in {
   from { opacity: 0; transform: translateY(14px); }

@@ -16,7 +16,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="page-grid bg-[#d4ccc0] py-24 md:py-40">
+      <section className="page-grid bg-paper py-24 md:py-40">
         <div className="col-span-12 md:col-span-7 md:col-start-4">
           <p className="nav-text mb-7">Kontaktformular</p>
           <h2 className="headline max-w-3xl">Erzähl uns von deinem Vorhaben.</h2>
@@ -36,7 +36,7 @@ export default function ContactPage() {
             </div>
             <div className="md:col-span-2">
               <button className="nav-text border-b border-ink pb-1 transition-opacity hover:opacity-60" type="submit">Senden</button>
-              <p className="project-copy mt-4 text-charcoal/65">Mit dem Senden öffnet sich dein E-Mail-Programm.</p>
+              <p className="project-copy mt-4 text-ink/65">Mit dem Senden öffnet sich dein E-Mail-Programm.</p>
             </div>
           </form>
         </div>
