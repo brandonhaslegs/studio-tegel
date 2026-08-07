@@ -25,7 +25,7 @@ export default function Home() {
       <div className="page-grid">
         <div className="col-span-12 border-t border-ink/15 pt-3 md:col-span-2"><p className="nav-text">Leistungen</p></div>
         <div className="col-span-12 mt-14 md:col-span-7 md:col-start-4 md:mt-0">
-          {[["01", "Möbel & Stauraum", "Schrankwände, Regale, Sideboards und Kommoden für den Wohnbereich."], ["02", "Raumspezifische Möbel", "Hochbetten, Hochebenen, Podeste und Raumtrenner, exakt für ihren Ort gemacht."], ["03", "Gewerbe & Gastronomie", "Ein- und Umbau von Büroräumen, Gewerbeflächen und Ladeneinrichtungen."]].map(([number, title, text]) => <div className="grid grid-cols-8 border-t border-ink/15 py-5 first:border-t-0 first:pt-0" key={title}><span className="nav-text col-span-1">{number}</span><h3 className="headline col-span-4">{title}</h3><p className="project-copy col-span-3 text-ink/75">{text}</p></div>)}
+          {[["01", "Möbel & Stauraum", "Schrankwände, Regale, Sideboards und Kommoden für den Wohnbereich."], ["02", "Raumspezifische Möbel", "Hochbetten, Hochebenen, Podeste und Raumtrenner, exakt für ihren Ort gemacht."], ["03", "Gewerbe & Gastronomie", "Ein- und Umbau von Büroräumen, Gewerbeflächen und Ladeneinrichtungen."]].map(([number, title, text]) => <div className="grid grid-cols-8 border-t border-ink/15 py-5 first:border-t-0 first:pt-0" key={title}><span className="nav-text col-span-1">{number}</span><h3 className="headline col-span-7 col-start-2 md:col-span-4 md:col-start-auto">{title}</h3><p className="project-copy col-span-7 col-start-2 mt-5 text-ink/75 md:col-span-3 md:col-start-auto md:mt-0">{text}</p></div>)}
         </div>
       </div>
     </section>
