@@ -9,7 +9,7 @@ const links = [{ label: "Projekte", href: "/projects" }, { label: "Studio", href
 export function Navigation() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="fixed inset-x-0 top-0 z-50 text-ink">
+    <header className="fixed inset-x-0 top-0 z-50 mix-blend-difference text-paper">
       <nav className="relative z-10 grid grid-cols-2 items-start px-4 py-4 md:grid-cols-6 md:px-8 md:py-6" aria-label="Hauptnavigation">
         <Link href="/" className="text-[0.82rem] font-medium tracking-[-0.045em] md:text-[clamp(1.05rem,1.6vw,1.65rem)] md:tracking-[-0.04em]">STUDIO TEGEL</Link>
         {links.map((link) => <Link className="hidden justify-self-center text-[clamp(1.05rem,1.6vw,1.65rem)] leading-none tracking-[-0.04em] transition-opacity hover:opacity-50 md:block" href={link.href} key={link.href}>{link.label}</Link>)}
