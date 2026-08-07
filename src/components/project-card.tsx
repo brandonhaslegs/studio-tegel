@@ -15,8 +15,8 @@ export function ProjectCard({ project, priority = false }: { project: { title: s
         <div className="absolute inset-0 transition-opacity duration-500 md:opacity-0 md:group-hover:opacity-90 md:group-focus-visible:opacity-90" style={{ backgroundColor: colorForProject(project.slug), mixBlendMode: "color" }} />
         <div className="absolute inset-0 flex items-end p-5 text-ink transition-opacity duration-500 md:opacity-0 md:group-hover:opacity-100 md:group-focus-visible:opacity-100">
           <div className="translate-y-0 transition-transform duration-500 md:translate-y-3 md:group-hover:translate-y-0 md:group-focus-visible:translate-y-0">
-            <p className="eyebrow mb-3 text-ink/75">{project.type}</p>
-            <h3 className="text-3xl leading-[1.05] tracking-[-0.03em] md:text-4xl">{project.title}</h3>
+            <p className="nav-text mb-3 text-ink/75">{project.type}</p>
+            <h3 className="headline">{project.title}</h3>
           </div>
         </div>
       </div>

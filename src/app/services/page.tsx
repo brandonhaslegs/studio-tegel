@@ -49,17 +49,17 @@ const services = [
 export default function ServicesPage() {
   return (
     <main>
-      <PageIntro compact eyebrow="Leistungen" title="Räume, Möbel und Dinge, die bleiben." />
+      <PageIntro compact label="Leistungen" title="Räume, Möbel und Dinge, die bleiben." />
 
       <section className="page-grid bg-[#d4ccc0] py-24 md:py-40" aria-label="Leistungen im Überblick">
         <div className="col-span-12 md:col-span-8 md:col-start-4">
           {services.map((service) => (
             <article className="grid grid-cols-8 gap-y-5 border-t border-black/15 py-8 md:gap-y-8 md:py-10" key={service.number}>
-              <p className="eyebrow col-span-1">{service.number}</p>
+              <p className="nav-text col-span-1">{service.number}</p>
               <div className="col-span-7 md:col-span-4">
-                <h2 className="text-3xl tracking-[-0.02em] md:text-4xl">{service.title}</h2>
+                <h2 className="headline">{service.title}</h2>
               </div>
-              <div className="col-span-7 col-start-2 space-y-5 text-sm leading-relaxed text-charcoal/80 md:col-span-3 md:col-start-6">
+              <div className="project-copy col-span-7 col-start-2 space-y-5 text-charcoal/80 md:col-span-3 md:col-start-6">
                 <div className="image-frame relative aspect-[5/4] overflow-hidden">
                   <Image src={service.image} alt={service.title} fill sizes="(max-width: 768px) 80vw, 25vw" className="object-cover" />
                 </div>
@@ -78,9 +78,9 @@ export default function ServicesPage() {
 
       <section className="page-grid bg-paper py-24 md:py-40">
         <div className="col-span-12 md:col-span-7 md:col-start-4">
-          <p className="eyebrow mb-7">Projekt anfragen</p>
-          <h2 className="display-medium max-w-4xl text-5xl md:text-7xl">Erzähl uns, was du vorhast.</h2>
-          <Link className="mt-10 inline-block border-b border-ink pb-1 text-sm" href="/contact">Kontakt aufnehmen</Link>
+          <p className="nav-text mb-7">Projekt anfragen</p>
+          <h2 className="headline max-w-4xl">Erzähl uns, was du vorhast.</h2>
+          <Link className="nav-text mt-10 inline-block border-b border-ink pb-1" href="/contact">Kontakt aufnehmen</Link>
         </div>
       </section>
 
