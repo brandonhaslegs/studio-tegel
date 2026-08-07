@@ -8,7 +8,7 @@ const links = [{ label: "Projekte", href: "/projects" }, { label: "Studio", href
 
 function StudioTegelMark() {
   return (
-    <svg aria-hidden="true" className="block h-16 w-11" viewBox="0 0 33 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg aria-hidden="true" className="block h-16 w-11 text-white" viewBox="0 0 33 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 19.3239H3.852C6.66481 19.3239 7.62347 21.9804 7.62347 24.3886V28.4446C7.62347 30.8543 6.66833 33.6039 3.852 33.6039H0V19.3239ZM2.64997 30.9639H3.216C4.392 30.9639 4.80347 30.0926 4.80347 28.4446V24.3886C4.80347 22.7406 4.392 21.9639 3.216 21.9639H2.64997V30.9639Z" fill="currentColor" />
       <path d="M24.728 10.872V0.119995H27.548V10.872C27.548 11.3823 27.9853 11.76 28.484 11.76C29.0008 11.76 29.408 11.399 29.408 10.872V0.119995H32.228V10.872C32.228 13.0236 30.6457 14.52 28.484 14.52C26.3458 14.52 24.728 12.9867 24.728 10.872Z" fill="currentColor" />
       <path d="M14.764 14.4V2.76H12.544V0.119995H19.804V2.76H17.584V14.4H14.764Z" fill="currentColor" />
@@ -28,7 +28,7 @@ export function Navigation() {
   const [open, setOpen] = useState(false);
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      <nav className="relative z-10 grid grid-cols-2 items-start px-4 py-4 text-ink md:grid-cols-6 md:px-8 md:py-6 md:text-paper md:mix-blend-difference" aria-label="Hauptnavigation">
+      <nav className="relative z-10 grid grid-cols-2 items-start px-4 py-4 text-white mix-blend-difference md:grid-cols-6 md:px-8 md:py-6" aria-label="Hauptnavigation">
         <Link href="/" className="block w-fit" aria-label="Studio Tegel, Startseite"><StudioTegelMark /></Link>
         {links.map((link) => <Link className="nav-text hidden justify-self-center transition-opacity hover:opacity-50 md:block" href={link.href} key={link.href}>{link.label}</Link>)}
         <a className="nav-text hidden justify-self-end transition-opacity hover:opacity-50 md:block" href="https://www.instagram.com/studio_tegel/" rel="noreferrer" target="_blank">Instagram</a>
