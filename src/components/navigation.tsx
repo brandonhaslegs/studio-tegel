@@ -28,7 +28,7 @@ export function Navigation() {
   const [open, setOpen] = useState(false);
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      <nav className="relative z-10 grid grid-cols-2 items-start px-4 py-4 text-paper mix-blend-difference md:grid-cols-6 md:px-8 md:py-6" aria-label="Hauptnavigation">
+      <nav className="relative z-10 grid grid-cols-2 items-start px-4 py-4 text-ink md:grid-cols-6 md:px-8 md:py-6 md:text-paper md:mix-blend-difference" aria-label="Hauptnavigation">
         <Link href="/" className="block w-fit" aria-label="Studio Tegel, Startseite"><StudioTegelMark /></Link>
         {links.map((link) => <Link className="nav-text hidden justify-self-center transition-opacity hover:opacity-50 md:block" href={link.href} key={link.href}>{link.label}</Link>)}
         <a className="nav-text hidden justify-self-end transition-opacity hover:opacity-50 md:block" href="https://www.instagram.com/studio_tegel/" rel="noreferrer" target="_blank">Instagram</a>
