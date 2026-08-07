@@ -14,7 +14,7 @@ export default function Home() {
       <div className="absolute inset-0 bg-ink/25" />
       <div className="page-grid relative min-h-svh items-end pb-7 pt-28 md:pb-10">
         <div className="col-span-12 md:col-span-10">
-          <p className="nav-text mb-6">Berlin / Designstudio & Holzwerkstatt</p>
+          <p className="nav-text mb-6">Designstudio & Holzwerkstatt</p>
           <h1 className="headline max-w-[11ch]">Zirkuläres Bauen für die Stadt von morgen.</h1>
         </div>
         <p className="project-copy col-span-7 col-start-6 mt-10 text-paper/80 md:col-span-3 md:col-start-10">Wir retten und verbauen bestehende Materialien für maßgefertigte Projekte.</p>
