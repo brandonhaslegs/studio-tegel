@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export function Footer() {
-  return <footer className="bg-ink px-4 pb-5 pt-16 text-paper md:px-8 md:pt-24">
+  return <footer className="site-footer bg-ink px-4 pb-5 pt-16 text-paper md:px-8 md:pt-24">
     <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
       <p className="col-span-1 text-sm leading-relaxed text-paper/65 md:col-span-3">Designstudio und Holzwerkstatt in Berlin.</p>
       <div className="col-span-1 md:col-start-7 md:col-span-2"><p className="eyebrow mb-3 text-paper/50">Besuch</p><p className="text-sm leading-relaxed">Berlin, Deutschland<br />Nach Vereinbarung</p></div>
