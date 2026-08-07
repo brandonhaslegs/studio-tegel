@@ -68,6 +68,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: "Google Sans Flex", Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 ::selection { background: var(--ink); color: var(--paper); }
