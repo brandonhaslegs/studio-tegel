@@ -10,12 +10,11 @@ export function Navigation() {
   const [open, setOpen] = useState(false);
   return (
     <header className="fixed inset-x-0 top-0 z-50 text-ink">
-      <nav className="relative z-10 flex items-center justify-between px-4 py-4 md:px-8 md:py-6" aria-label="Hauptnavigation">
-        <Link href="/" className="text-[0.82rem] font-medium tracking-[-0.045em]">STUDIO TEGEL</Link>
-        <div className="hidden items-center gap-7 md:flex">
-          {links.map((link) => <Link className="eyebrow transition-opacity hover:opacity-50" href={link.href} key={link.href}>{link.label}</Link>)}
-        </div>
-        <button className="eyebrow md:hidden" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="mobile-navigation">{open ? "Schließen" : "Menü"}</button>
+      <nav className="relative z-10 grid grid-cols-2 items-start px-4 py-4 md:grid-cols-6 md:px-8 md:py-6" aria-label="Hauptnavigation">
+        <Link href="/" className="text-[0.82rem] font-medium tracking-[-0.045em] md:text-[clamp(1.05rem,1.6vw,1.65rem)] md:tracking-[-0.04em]">STUDIO TEGEL</Link>
+        {links.map((link) => <Link className="hidden justify-self-center text-[clamp(1.05rem,1.6vw,1.65rem)] leading-none tracking-[-0.04em] transition-opacity hover:opacity-50 md:block" href={link.href} key={link.href}>{link.label}</Link>)}
+        <a className="hidden justify-self-end text-[clamp(1.05rem,1.6vw,1.65rem)] leading-none tracking-[-0.04em] transition-opacity hover:opacity-50 md:block" href="https://www.instagram.com/studio_tegel/" rel="noreferrer" target="_blank">Instagram</a>
+        <button className="eyebrow justify-self-end md:hidden" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="mobile-navigation">{open ? "Schließen" : "Menü"}</button>
       </nav>
       <AnimatePresence>
         {open && <motion.div id="mobile-navigation" initial={{ opacity: 0, clipPath: "inset(0 0 100% 0)" }} animate={{ opacity: 1, clipPath: "inset(0 0 0% 0)" }} exit={{ opacity: 0, clipPath: "inset(0 0 100% 0)" }} transition={{ duration: 0.35, ease: [0.2, 0.65, 0.2, 1] }} className="fixed inset-0 z-0 flex min-h-svh flex-col bg-paper px-4 pb-8 pt-24 text-ink">
