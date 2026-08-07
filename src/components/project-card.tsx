@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const overlayColors = ["#d65d3a", "#d6a33a", "#708d60", "#3f8296", "#7a5d9d", "#b35872", "#8d7754"];
+const overlayColors = ["#ff9b85", "#963d5a", "#ead637", "#0e34a0", "#a2d3c2"];
 
 function colorForProject(slug: string) {
   return overlayColors[[...slug].reduce((total, character) => total + character.charCodeAt(0), 0) % overlayColors.length];
