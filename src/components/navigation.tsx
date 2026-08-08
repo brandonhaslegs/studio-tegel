@@ -23,7 +23,7 @@ export function Navigation() {
       <AnimatePresence>
         {open && <motion.div id="mobile-navigation" initial={{ opacity: 0, clipPath: "inset(0 0 100% 0)" }} animate={{ opacity: 1, clipPath: "inset(0 0 0% 0)" }} exit={{ opacity: 0, clipPath: "inset(0 0 100% 0)" }} transition={{ duration: 0.35, ease: [0.2, 0.65, 0.2, 1] }} className="fixed inset-0 z-40 flex min-h-svh flex-col bg-paper px-4 pb-8 pt-24 text-ink">
           <div className="flex flex-col gap-1">{links.map((link) => <Link onClick={() => setOpen(false)} className="headline border-t border-ink/20 py-2 text-[10vw]" href={link.href} key={link.href}>{link.label}</Link>)}</div>
-          <div className="mt-auto flex items-end justify-between border-t border-ink/20 pt-4"><p className="project-copy max-w-[14ch] text-ink/65">Maßgefertigte Innenräume und Möbel aus Berlin.</p><div className="flex flex-col items-end gap-2"><a className="nav-text underline underline-offset-4" href="mailto:team@studiotegel.de">E-Mail</a><a className="nav-text underline underline-offset-4" href="https://www.instagram.com/studio_tegel/" rel="noreferrer" target="_blank">Instagram</a></div></div>
+          <div className="mt-auto flex items-end justify-between border-t border-ink/20 pt-4"><p className="project-copy text-ink/65">Maßgefertigte Innenräume und Möbel aus Berlin.</p><div className="flex shrink-0 items-center gap-4"><a className="nav-text whitespace-nowrap underline underline-offset-4" href="mailto:team@studiotegel.de">E-Mail</a><a className="nav-text whitespace-nowrap underline underline-offset-4" href="https://www.instagram.com/studio_tegel/" rel="noreferrer" target="_blank">Instagram</a></div></div>
         </motion.div>}
       </AnimatePresence>
     </>
