@@ -26,7 +26,7 @@ export function HomeHeroCarousel({ slides }: { slides: Slide[] }) {
     <section className="relative min-h-[75svh] bg-ink text-ink" data-header-blend-hero>
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
         <AnimatePresence initial={false}>
-          <motion.div className="absolute inset-0" animate={{ opacity: 1 }} exit={{ opacity: 0 }} initial={{ opacity: 0 }} key={activeSlide.src} style={{ backgroundColor: colorForProject(activeSlide.slug) }} transition={{ duration: 0.7, ease: [0.2, 0.65, 0.2, 1] }}>
+          <motion.div className="absolute inset-0 bg-paper" animate={{ opacity: 1 }} exit={{ opacity: 0 }} initial={{ opacity: 0 }} key={activeSlide.src} transition={{ duration: 0.7, ease: [0.2, 0.65, 0.2, 1] }}>
             <Image src={activeSlide.src} alt="" fill priority={activeIndex === 0} sizes="100vw" className="object-cover opacity-35" />
             <div className="absolute inset-0" style={{ backgroundColor: colorForProject(activeSlide.slug), mixBlendMode: "color" }} />
           </motion.div>
