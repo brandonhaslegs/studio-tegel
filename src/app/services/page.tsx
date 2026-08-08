@@ -1,9 +1,9 @@
 import Link from "next/link";
-import Image from "next/image";
 
 import { Footer } from "@/components/footer";
 import { PageIntro } from "@/components/page-intro";
 import { Reveal } from "@/components/reveal";
+import { SiteImage } from "@/components/site-image";
 
 const services = [
   {
@@ -59,7 +59,7 @@ export default function ServicesPage() {
               <p className="nav-text col-span-1">{service.number}</p>
               <div className="col-span-7 col-start-2 space-y-5">
                 <div className="image-frame relative aspect-[5/4] overflow-hidden">
-                  <Image src={service.image} alt={service.title} fill sizes="(max-width: 768px) 80vw, 58vw" className="object-cover" />
+                  <SiteImage src={service.image} alt={service.title} fill sizes="(max-width: 768px) 80vw, 58vw" className="object-cover" />
                 </div>
                 <h2 className="headline">{service.title}</h2>
                 <div className="project-copy space-y-5">

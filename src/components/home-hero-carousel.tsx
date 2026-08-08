@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { colorForProject } from "@/lib/project-colors";
+import { SiteImage } from "@/components/site-image";
 
 type Slide = {
   alt: string;
@@ -27,7 +27,7 @@ export function HomeHeroCarousel({ slides }: { slides: Slide[] }) {
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
         <AnimatePresence initial={false}>
           <motion.div className="absolute inset-0 bg-paper" animate={{ opacity: 1 }} exit={{ opacity: 0 }} initial={{ opacity: 0 }} key={activeSlide.src} transition={{ duration: 0.7, ease: [0.2, 0.65, 0.2, 1] }}>
-            <Image src={activeSlide.src} alt="" fill priority={activeIndex === 0} sizes="100vw" className="object-cover opacity-35" />
+            <SiteImage src={activeSlide.src} alt="" fill priority={activeIndex === 0} sizes="100vw" className="object-cover opacity-35" />
             <div className="absolute inset-0" style={{ backgroundColor: colorForProject(activeSlide.slug), mixBlendMode: "color" }} />
           </motion.div>
         </AnimatePresence>

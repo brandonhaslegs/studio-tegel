@@ -1,9 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Footer } from "@/components/footer";
 import { HomeHeroCarousel } from "@/components/home-hero-carousel";
 import { ProjectCard } from "@/components/project-card";
 import { Reveal } from "@/components/reveal";
+import { SiteImage } from "@/components/site-image";
 import { images, projects } from "@/lib/site";
 
 export default function Home() {
@@ -29,7 +29,7 @@ export default function Home() {
     </section>
 
     <section className="page-grid py-24 md:py-40">
-      <Reveal className="col-span-12 md:col-span-5"><div className="image-frame relative aspect-[4/5]"><Image src={images.workshop} alt="Holzwerkstatt von Studio Tegel" fill sizes="(max-width: 768px) 100vw, 42vw" className="object-cover" /></div></Reveal>
+      <Reveal className="col-span-12 md:col-span-5"><div className="image-frame relative aspect-[4/5]"><SiteImage src={images.workshop} alt="Holzwerkstatt von Studio Tegel" fill sizes="(max-width: 768px) 100vw, 42vw" className="object-cover" /></div></Reveal>
       <Reveal delay={0.1} className="col-span-12 mt-10 flex flex-col justify-between md:col-span-5 md:col-start-8 md:mt-0"><div><h2 className="headline">Materialien haben wir genug.</h2></div><div className="mt-16"><p className="project-copy max-w-sm">Wir verarbeiten Baustoffe, die sonst auf der Deponie landen würden, zu neuen, zirkulären Möbeln und Produkten.</p><Link className="nav-text mt-8 inline-block border-b border-ink pb-1 hover:underline" href="/studio">Mehr über das Studio</Link></div></Reveal>
     </section>
 

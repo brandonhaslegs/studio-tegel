@@ -145,3 +145,17 @@ a { color: inherit; text-decoration: none; }
 }
 
 .image-frame { overflow: hidden; background: var(--paper); }
+
+.image-skeleton {
+  background: linear-gradient(100deg, var(--paper) 35%, color-mix(in srgb, var(--paper) 88%, var(--ink)) 50%, var(--paper) 65%);
+  background-size: 200% 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .image-skeleton { animation: skeleton-sweep 1.2s linear infinite; }
+}
+
+@keyframes skeleton-sweep {
+  from { background-position: 100% 0; }
+  to { background-position: -100% 0; }
+}

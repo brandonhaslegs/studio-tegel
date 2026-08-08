@@ -1,8 +1,8 @@
-import Image from "next/image";
 
 import { Footer } from "@/components/footer";
 import { PageIntro } from "@/components/page-intro";
 import { Reveal } from "@/components/reveal";
+import { SiteImage } from "@/components/site-image";
 import { images } from "@/lib/site";
 
 const principles = [
@@ -32,7 +32,7 @@ export default function StudioPage() {
 
       <section className="page-grid pb-24 md:pb-40">
         <Reveal className="image-frame relative col-span-12 aspect-[3/2] md:col-span-8 md:col-start-3">
-          <Image src={images.team} alt="Das Team von Studio Tegel" fill sizes="(max-width: 768px) 100vw, 66vw" className="object-cover" />
+          <SiteImage src={images.team} alt="Das Team von Studio Tegel" fill sizes="(max-width: 768px) 100vw, 66vw" className="object-cover" />
         </Reveal>
       </section>
 
