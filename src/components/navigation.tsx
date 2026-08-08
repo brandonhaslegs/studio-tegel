@@ -14,6 +14,8 @@ export function Navigation() {
   const [pastHero, setPastHero] = useState(false);
   const pathname = usePathname();
   const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
+  const isProjectPage = pathname.startsWith("/projects/");
+  const headerColor = open || (pathname === "/" && !pastHero) ? "text-ink" : isProjectPage && !pastHero ? "text-paper" : "text-paper mix-blend-difference";
 
   useLayoutEffect(() => {
     const updateScrolled = () => {
@@ -30,7 +32,7 @@ export function Navigation() {
 
   return (
     <>
-      <header className={`fixed inset-x-0 top-0 z-50 ${open ? "text-ink" : `text-paper ${pathname !== "/" && !pathname.startsWith("/projects/") || pastHero ? "mix-blend-difference" : ""}`} `}>
+      <header className={`fixed inset-x-0 top-0 z-50 ${headerColor}`}>
         <nav className="grid grid-cols-2 items-start px-4 py-4 md:grid-cols-6 md:px-8 md:py-6" aria-label="Hauptnavigation">
           <Link href="/" className="block w-fit" aria-label="Studio Tegel, Startseite" onClick={(event) => { if (pathname === "/" && window.scrollY > 0) { event.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); } }}><StudioTegelMark className={`h-16 w-11 md:transition-[width,height] md:duration-200 md:ease-out ${scrolled ? "md:h-16 md:w-11" : "md:h-48 md:w-[132px]"}`} /></Link>
           {links.map((link) => <Link aria-current={isActive(link.href) ? "page" : undefined} className={`nav-text hidden justify-self-center hover:underline md:block ${isActive(link.href) ? "border-b border-current pb-1" : ""}`} href={link.href} key={link.href}>{link.label}</Link>)}
