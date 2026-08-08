@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Footer } from "@/components/footer";
+import { HomeHeroCarousel } from "@/components/home-hero-carousel";
 import { Navigation } from "@/components/navigation";
 import { ProjectCard } from "@/components/project-card";
 import { Reveal } from "@/components/reveal";
@@ -9,15 +10,7 @@ import { images, projects } from "@/lib/site";
 export default function Home() {
   return <main className="overflow-hidden">
     <Navigation />
-    <section className="relative min-h-[75svh] bg-ink text-paper">
-      <Image src={images.hero} alt="Studio Tegel am ehemaligen Flughafen Tegel" fill priority sizes="100vw" className="object-cover" />
-      <div className="page-grid relative min-h-[75svh] items-end pb-7 pt-28 md:pb-10">
-        <div className="col-span-12 md:col-span-10">
-          <h1 className="headline home-hero-title">Zirkuläres Bauen für die Stadt von morgen.</h1>
-        </div>
-        <p className="project-copy col-span-7 col-start-6 mt-10 text-paper md:col-span-3 md:col-start-10">Wir retten und verbauen bestehende Materialien für maßgefertigte Projekte.</p>
-      </div>
-    </section>
+    <HomeHeroCarousel slides={projects.map((project) => ({ src: project.image, alt: project.title }))} />
 
     <Reveal>
       <section className="bg-paper py-24 md:py-40">
