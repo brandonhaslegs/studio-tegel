@@ -17,7 +17,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   const otherProjects = projects.filter(({ slug: projectSlug }) => projectSlug !== project.slug);
   return (
     <main>
-      <section className="relative min-h-[75svh] bg-ink text-paper">
+      <section className="relative min-h-[75svh] bg-ink text-paper" data-header-blend-hero>
         <Image src={project.image} alt={project.title} fill priority sizes="100vw" className="object-cover" />
         <div className="absolute inset-x-0 bottom-0 text-ink" style={{ backgroundColor: colorForProject(project.slug) }}>
           <div className="page-grid py-8 md:py-10">

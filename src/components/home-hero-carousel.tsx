@@ -22,7 +22,7 @@ export function HomeHeroCarousel({ slides }: { slides: Slide[] }) {
   const activeSlide = slides[activeIndex];
 
   return (
-    <section className="relative min-h-[75svh] bg-ink text-paper" data-home-hero>
+    <section className="relative min-h-[75svh] bg-ink text-paper" data-header-blend-hero>
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
         <AnimatePresence initial={false}>
           <motion.div className="absolute inset-0" animate={{ opacity: 1 }} exit={{ opacity: 0 }} initial={{ opacity: 0 }} key={activeSlide.src} style={{ backgroundColor: colorForProject(activeSlide.slug) }} transition={{ duration: 0.7, ease: [0.2, 0.65, 0.2, 1] }}>
