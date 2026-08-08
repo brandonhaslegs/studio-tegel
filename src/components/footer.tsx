@@ -14,7 +14,7 @@ export function Footer() {
       </div>
     </Reveal>
     <div className="px-4 pb-5 pt-16 md:px-8 md:pt-24">
-      <div className="flex flex-col gap-4 border-t border-paper pt-4 md:flex-row md:items-end md:justify-between"><p className="nav-text">Studio Tegel: Designstudio und Holzwerkstatt</p><div className="flex gap-4"><Link className="nav-text" href="/agb">AGB</Link><Link className="nav-text" href="/datenschutz">Datenschutz</Link><p className="nav-text">© 2026</p></div></div>
+      <div className="flex flex-col gap-4 border-t border-paper pt-4 md:flex-row md:items-end md:justify-between"><p className="nav-text">Studio Tegel: Designstudio und Holzwerkstatt</p><div className="flex gap-4"><Link className="nav-text" href="/impressum">Impressum</Link><Link className="nav-text" href="/agb">AGB</Link><Link className="nav-text" href="/datenschutz">Datenschutz</Link><p className="nav-text">© 2026</p></div></div>
     </div>
   </footer>;
 }
