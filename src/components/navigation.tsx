@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { StudioTegelMark } from "@/components/studio-tegel-mark";
 
 const links = [{ label: "Projekte", href: "/projects" }, { label: "Studio", href: "/studio" }, { label: "Leistungen", href: "/services" }, { label: "Kontakt", href: "/contact" }];
@@ -14,12 +14,23 @@ export function Navigation() {
   const pathname = usePathname();
   const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const updateScrolled = () => setScrolled(window.scrollY > 16);
-    updateScrolled();
-    window.addEventListener("scroll", updateScrolled, { passive: true });
-    return () => window.removeEventListener("scroll", updateScrolled);
-  }, []);
+    let secondFrame = 0;
+    const firstFrame = requestAnimationFrame(() => {
+      secondFrame = requestAnimationFrame(() => {
+        updateScrolled();
+        window.addEventListener("scroll", updateScrolled, { passive: true });
+      });
+    });
+
+    setScrolled(false);
+    return () => {
+      cancelAnimationFrame(firstFrame);
+      cancelAnimationFrame(secondFrame);
+      window.removeEventListener("scroll", updateScrolled);
+    };
+  }, [pathname]);
 
   return (
     <>
