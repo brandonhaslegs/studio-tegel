@@ -19,18 +19,20 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="bg-paper py-24 md:py-40">
-      <div className="page-grid">
+    <Reveal>
+      <section className="bg-paper py-24 md:py-40">
+        <div className="page-grid">
         <div className="col-span-12 border-t border-ink pt-3 md:col-span-2"><p className="nav-text">Leistungen</p></div>
         <div className="col-span-12 mt-14 md:col-span-7 md:col-start-4 md:mt-0">
           {[["01", "Möbel & Stauraum", "Schrankwände, Regale, Sideboards und Kommoden für den Wohnbereich."], ["02", "Maßgefertigte Möbel", "Hochbetten, Hochebenen, Podeste und Raumtrenner, exakt für ihren Ort gemacht."], ["03", "Gewerbe & Gastronomie", "Ein- und Umbau von Büroräumen, Gewerbeflächen und Ladeneinrichtungen."]].map(([number, title, text]) => <div className="grid grid-cols-8 border-t border-ink py-5 first:border-t-0 first:pt-0" key={title}><span className="nav-text col-span-1">{number}</span><h3 className="headline home-service-title col-span-7 col-start-2">{title}</h3><p className="project-copy col-span-7 col-start-2 mt-5">{text}</p></div>)}
         </div>
-      </div>
-    </section>
+        </div>
+      </section>
+    </Reveal>
 
     <section className="px-4 pb-24 md:px-8 md:pb-40">
       <div className="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2">
-        {projects.slice(0, 4).map((project, index) => <ProjectCard key={project.slug} priority={index === 0} project={project} />)}
+        {projects.slice(0, 4).map((project, index) => <Reveal delay={index * 0.06} key={project.slug}><ProjectCard priority={index === 0} project={project} /></Reveal>)}
       </div>
       <Link className="headline mt-16 inline-block border-b border-ink pb-2" href="/projects">Mehr Projekte ansehen.</Link>
     </section>

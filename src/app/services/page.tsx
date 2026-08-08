@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import { Footer } from "@/components/footer";
 import { PageIntro } from "@/components/page-intro";
+import { Reveal } from "@/components/reveal";
 
 const services = [
   {
@@ -53,8 +54,8 @@ export default function ServicesPage() {
 
       <section className="page-grid bg-paper py-24 md:py-40" aria-label="Leistungen im Überblick">
         <div className="col-span-12 md:col-span-8 md:col-start-4">
-          {services.map((service) => (
-            <article className="grid grid-cols-8 gap-y-5 border-t border-ink py-8 md:gap-y-8 md:py-10" key={service.number}>
+          {services.map((service, index) => (
+            <Reveal className="grid grid-cols-8 gap-y-5 border-t border-ink py-8 md:gap-y-8 md:py-10" delay={index * 0.06} key={service.number}>
               <p className="nav-text col-span-1">{service.number}</p>
               <div className="col-span-7 col-start-2 space-y-5">
                 <div className="image-frame relative aspect-[5/4] overflow-hidden">
@@ -71,17 +72,17 @@ export default function ServicesPage() {
                   )}
                 </div>
               </div>
-            </article>
+            </Reveal>
           ))}
         </div>
       </section>
 
       <section className="page-grid bg-paper py-24 md:py-40">
-        <div className="col-span-12 md:col-span-7 md:col-start-4">
+        <Reveal className="col-span-12 md:col-span-7 md:col-start-4">
           <p className="nav-text mb-7">Projekt anfragen</p>
           <h2 className="headline max-w-4xl">Erzähl uns, was du vorhast.</h2>
           <Link className="nav-text mt-10 inline-block border-b border-ink pb-1" href="/contact">Kontakt aufnehmen</Link>
-        </div>
+        </Reveal>
       </section>
 
       <Footer />

@@ -1,5 +1,6 @@
 import { Footer } from "@/components/footer";
 import { PageIntro } from "@/components/page-intro";
+import { Reveal } from "@/components/reveal";
 
 export default function ContactPage() {
   return (
@@ -9,14 +10,14 @@ export default function ContactPage() {
       </PageIntro>
 
       <section className="page-grid bg-ink py-24 text-paper md:py-40">
-        <div className="col-span-12 md:col-span-7 md:col-start-4">
+        <Reveal className="col-span-12 md:col-span-7 md:col-start-4">
           <p className="nav-text mb-6">E-Mail</p>
           <a className="headline contact-email whitespace-nowrap underline decoration-paper underline-offset-[0.15em]" href="mailto:team@studiotegel.de">team@studiotegel.de</a>
-        </div>
+        </Reveal>
       </section>
 
       <section className="page-grid bg-paper py-24 md:py-40">
-        <div className="col-span-12 md:col-span-7 md:col-start-4">
+        <Reveal className="col-span-12 md:col-span-7 md:col-start-4">
           <p className="nav-text mb-7">Kontaktformular</p>
           <h2 className="headline max-w-3xl">Erzähl uns von deinem Vorhaben.</h2>
 
@@ -38,7 +39,7 @@ export default function ContactPage() {
               <p className="project-copy mt-4">Mit dem Senden öffnet sich dein E-Mail-Programm.</p>
             </div>
           </form>
-        </div>
+        </Reveal>
       </section>
 
       <Footer />
