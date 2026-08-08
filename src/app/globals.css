@@ -134,6 +134,7 @@ a { color: inherit; text-decoration: none; }
 
 @media (min-width: 768px) {
   .project-card-title { font-size: 4.2vw; }
+  .contact-email { font-size: 5.2vw; }
 }
 
 .image-frame { overflow: hidden; background: var(--paper); }
