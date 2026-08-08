@@ -10,7 +10,7 @@ import { images, projects } from "@/lib/site";
 export default function Home() {
   return <main className="overflow-hidden">
     <Navigation />
-    <HomeHeroCarousel slides={projects.map((project) => ({ src: project.image, alt: project.title }))} />
+    <HomeHeroCarousel slides={projects.map((project) => ({ src: project.image, alt: project.title, slug: project.slug }))} />
 
     <Reveal>
       <section className="bg-paper py-24 md:py-40">

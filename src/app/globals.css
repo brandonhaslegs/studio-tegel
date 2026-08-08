@@ -145,5 +145,3 @@ a { color: inherit; text-decoration: none; }
 }
 
 .image-frame { overflow: hidden; background: var(--paper); }
-
-.hero-title-shadow { text-shadow: 0 2px 18px var(--ink); }
