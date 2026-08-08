@@ -129,7 +129,7 @@ a { color: inherit; text-decoration: none; }
 .middle-text {
   font-size: 20px;
   font-weight: 400;
-  letter-spacing: -0.04em;
+  letter-spacing: normal;
   line-height: 1.1;
 }
 
