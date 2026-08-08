@@ -9,12 +9,12 @@ import { images, projects } from "@/lib/site";
 export default function Home() {
   return <main className="overflow-hidden">
     <Navigation />
-    <section className="relative min-h-svh bg-ink text-paper">
+    <section className="relative min-h-[75svh] bg-ink text-paper">
       <Image src={images.hero} alt="Studio Tegel am ehemaligen Flughafen Tegel" fill priority sizes="100vw" className="object-cover opacity-85" />
       <div className="absolute inset-0 bg-ink/25" />
-      <div className="page-grid relative min-h-svh items-end pb-7 pt-28 md:pb-10">
+      <div className="page-grid relative min-h-[75svh] items-end pb-7 pt-28 md:pb-10">
         <div className="col-span-12 md:col-span-10">
-          <h1 className="headline max-w-[11ch]">Zirkuläres Bauen für die Stadt von morgen.</h1>
+          <h1 className="headline home-hero-title">Zirkuläres Bauen für die Stadt von morgen.</h1>
         </div>
         <p className="project-copy col-span-7 col-start-6 mt-10 text-paper/80 md:col-span-3 md:col-start-10">Wir retten und verbauen bestehende Materialien für maßgefertigte Projekte.</p>
       </div>
