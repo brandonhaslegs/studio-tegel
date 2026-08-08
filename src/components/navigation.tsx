@@ -22,7 +22,7 @@ export function Navigation() {
     <>
       <header className="fixed inset-x-0 top-0 z-50 text-white mix-blend-difference">
         <nav className="grid grid-cols-2 items-start px-4 py-4 md:grid-cols-6 md:px-8 md:py-6" aria-label="Hauptnavigation">
-          <Link href="/" className="block w-fit" aria-label="Studio Tegel, Startseite"><StudioTegelMark className={`transition-[width,height] duration-500 ease-out ${scrolled ? "h-16 w-11" : "h-48 w-[132px]"}`} /></Link>
+          <Link href="/" className="block w-fit" aria-label="Studio Tegel, Startseite"><StudioTegelMark className={`transition-[width,height] duration-200 ease-out ${scrolled ? "h-16 w-11" : "h-48 w-[132px]"}`} /></Link>
           {links.map((link) => <Link className="nav-text hidden justify-self-center transition-opacity hover:opacity-50 md:block" href={link.href} key={link.href}>{link.label}</Link>)}
           <a className="nav-text hidden justify-self-end transition-opacity hover:opacity-50 md:block" href="https://www.instagram.com/studio_tegel/" rel="noreferrer" target="_blank">Instagram</a>
           <button className="nav-text justify-self-end md:hidden" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="mobile-navigation">{open ? "Schließen" : "Menü"}</button>
