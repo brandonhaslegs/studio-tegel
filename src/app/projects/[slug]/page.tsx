@@ -34,7 +34,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       </section>
       <section className="bg-paper px-4 py-24 md:px-8 md:py-40">
         <Reveal><h2 className="headline max-w-4xl">Weitere Projekte —</h2></Reveal>
-        <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2">
+        <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-8 md:grid-cols-2">
           {otherProjects.map((otherProject, index) => <Reveal delay={index * 0.06} key={otherProject.slug}><ProjectCard project={otherProject} /></Reveal>)}
         </div>
       </section>

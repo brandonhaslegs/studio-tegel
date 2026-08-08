@@ -22,7 +22,7 @@ export default function Home() {
     </Reveal>
 
     <section className="px-4 pb-24 md:px-8 md:pb-40">
-      <div className="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-x-8 gap-y-8 md:grid-cols-2">
         {projects.slice(0, 4).map((project, index) => <Reveal delay={index * 0.06} key={project.slug}><ProjectCard priority={index === 0} project={project} /></Reveal>)}
       </div>
       <Link className="headline mt-16 inline-block border-b border-ink pb-2" href="/projects">Mehr Projekte ansehen.</Link>
