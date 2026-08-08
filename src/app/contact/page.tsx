@@ -12,7 +12,6 @@ export default function ContactPage() {
         <div className="col-span-12 md:col-span-7 md:col-start-4">
           <p className="nav-text mb-6 text-paper/60">E-Mail</p>
           <a className="headline contact-email whitespace-nowrap underline decoration-paper/35 underline-offset-[0.15em]" href="mailto:team@studiotegel.de">team@studiotegel.de</a>
-          <p className="project-copy mt-16 text-paper/65">Berlin, Deutschland<br />Besuche der Werkstatt nach Vereinbarung.</p>
         </div>
       </section>
 
