@@ -41,11 +41,10 @@ export default function Home() {
       <Reveal delay={0.1} className="col-span-12 mt-10 flex flex-col justify-between md:col-span-5 md:col-start-8 md:mt-0"><div><h2 className="headline">Materialien haben wir genug.</h2></div><div className="mt-16"><p className="project-copy max-w-sm">Wir verarbeiten Baustoffe, die sonst auf der Deponie landen würden, zu neuen, zirkulären Möbeln und Produkten.</p><Link className="nav-text mt-8 inline-block border-b border-ink pb-1 transition-opacity hover:opacity-60" href="/studio">Mehr über das Studio</Link></div></Reveal>
     </section>
 
-    <section className="bg-ink px-4 py-24 text-paper md:px-8 md:py-40">
-      <div className="grid grid-cols-1 gap-14 md:grid-cols-12">
+    <Footer showContact={false}>
+      <section className="page-grid py-24 text-paper md:py-40">
         <div className="md:col-span-8 md:col-start-4"><h2 className="headline max-w-[10ch]">Lass uns etwas bauen, das bleibt.</h2><a className="nav-text mt-12 inline-block border-b border-paper pb-1 transition-opacity hover:opacity-60" href="mailto:team@studiotegel.de">Kontakt aufnehmen</a><div className="mt-10 flex flex-wrap gap-x-16 gap-y-8"><div><p className="nav-text mb-3 text-paper/50">Kontakt</p><a className="project-copy underline underline-offset-4" href="mailto:team@studiotegel.de">team@studiotegel.de</a></div><div><p className="nav-text mb-3 text-paper/50">Social</p><a className="project-copy underline underline-offset-4" href="https://www.instagram.com/studio_tegel/" rel="noreferrer" target="_blank">Instagram</a></div></div></div>
-      </div>
-    </section>
-    <Footer showContact={false} />
+      </section>
+    </Footer>
   </main>;
 }
