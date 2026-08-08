@@ -100,7 +100,7 @@ a { color: inherit; text-decoration: none; }
 .nav-text {
   font-size: 16px;
   font-weight: 400;
-  letter-spacing: -0.04em;
+  letter-spacing: normal;
   line-height: 1.1;
   text-transform: none;
 }
@@ -112,7 +112,7 @@ a { color: inherit; text-decoration: none; }
 .project-copy {
   font-size: 16px;
   font-weight: 400;
-  letter-spacing: -0.02em;
+  letter-spacing: normal;
   line-height: 1.35;
 }
 
