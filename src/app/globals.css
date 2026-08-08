@@ -100,6 +100,7 @@ a { color: inherit; text-decoration: none; }
   .headline { font-size: 64px; }
   h2.headline { font-size: 5vw; }
   .home-hero-title { font-size: 6vw; }
+  .home-service-title { font-size: 6vw; }
 }
 
 .nav-text {
