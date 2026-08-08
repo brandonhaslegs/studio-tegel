@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { colorForProject } from "@/lib/project-colors";
@@ -39,7 +40,7 @@ export function HomeHeroCarousel({ slides }: { slides: Slide[] }) {
         <div className="col-span-5 row-start-2 mt-10 flex items-end gap-2 md:col-span-3" aria-label={`Projektbild ${activeIndex + 1} von ${slides.length}`}>
           {slides.map((slide, index) => <button aria-label={`Projektbild ${index + 1}: ${slide.alt}`} aria-pressed={activeIndex === index} className="flex h-4 w-4 items-center justify-center" key={slide.src} onClick={() => setActiveIndex(index)} type="button"><span className={`block h-2 w-2 rounded-full ${activeIndex === index ? "bg-ink" : "border border-ink"}`} /></button>)}
         </div>
-        <p className="project-copy col-span-7 col-start-6 row-start-2 mt-10 self-end md:col-span-3 md:col-start-10">{activeSlide.alt}</p>
+        <Link className="project-copy col-span-7 col-start-6 row-start-2 mt-10 block self-end text-right md:col-span-3 md:col-start-10" href={`/projects/${activeSlide.slug}`}>{activeSlide.alt}</Link>
       </div>
     </section>
   );
