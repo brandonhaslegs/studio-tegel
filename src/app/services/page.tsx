@@ -52,7 +52,7 @@ export default function ServicesPage() {
     <main>
       <PageIntro compact title="Räume, Möbel und Dinge, die bleiben." />
 
-      <section className="page-grid bg-paper py-24 md:py-40" aria-label="Leistungen im Überblick">
+      <section className="page-grid bg-paper py-24 md:py-40" aria-label="Services im Überblick">
         <div className="col-span-12 md:col-span-8 md:col-start-4">
           {services.map((service, index) => (
             <Reveal className="grid grid-cols-8 gap-y-5 border-t border-ink py-8 md:gap-y-8 md:py-10" delay={index * 0.06} key={service.number}>

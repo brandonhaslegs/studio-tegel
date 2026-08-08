@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { useLayoutEffect, useState } from "react";
 import { StudioTegelMark } from "@/components/studio-tegel-mark";
 
-const links = [{ label: "Projekte", href: "/projects" }, { label: "Studio", href: "/studio" }, { label: "Leistungen", href: "/services" }, { label: "Kontakt", href: "/contact" }];
+const links = [{ label: "Projekte", href: "/projects" }, { label: "Studio", href: "/studio" }, { label: "Services", href: "/services" }, { label: "Kontakt", href: "/contact" }];
 
 export function Navigation() {
   const [open, setOpen] = useState(false);
