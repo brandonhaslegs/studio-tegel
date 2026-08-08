@@ -43,9 +43,9 @@ export default function Home() {
 
     <section className="bg-ink px-4 py-24 text-paper md:px-8 md:py-40">
       <div className="grid grid-cols-1 gap-14 md:grid-cols-12">
-        <div className="md:col-span-8 md:col-start-4"><h2 className="headline max-w-[10ch]">Lass uns etwas bauen, das bleibt.</h2><a className="nav-text mt-12 inline-block underline underline-offset-4" href="mailto:team@studiotegel.de">Kontakt aufnehmen</a></div>
+        <div className="md:col-span-8 md:col-start-4"><h2 className="headline max-w-[10ch]">Lass uns etwas bauen, das bleibt.</h2><a className="nav-text mt-12 inline-block underline underline-offset-4" href="mailto:team@studiotegel.de">Kontakt aufnehmen</a><div className="mt-10 flex flex-wrap gap-x-16 gap-y-8"><div><p className="nav-text mb-3 text-paper/50">Kontakt</p><a className="project-copy underline underline-offset-4" href="mailto:team@studiotegel.de">team@studiotegel.de</a></div><div><p className="nav-text mb-3 text-paper/50">Social</p><a className="project-copy underline underline-offset-4" href="https://www.instagram.com/studio_tegel/" rel="noreferrer" target="_blank">Instagram</a></div></div></div>
       </div>
     </section>
-    <Footer />
+    <Footer showContact={false} />
   </main>;
 }
