@@ -32,11 +32,13 @@ export function HomeHeroCarousel({ slides }: { slides: Slide[] }) {
         </AnimatePresence>
       </div>
       <div className="page-grid relative min-h-[75svh] grid-rows-[1fr_auto] pb-7 pt-28 md:pb-10">
-        <h1 className="headline home-hero-title col-span-12 row-start-1 self-center md:col-span-10">Zirkuläres Bauen für die Stadt von morgen.</h1>
+        <div className="col-span-12 row-start-1 self-center md:col-span-10">
+          <h1 className="headline home-hero-title">Zirkuläres Bauen für die Stadt von morgen.</h1>
+          <p className="project-copy mt-8 max-w-md">Wir retten und verbauen bestehende Materialien für maßgefertigte Projekte.</p>
+        </div>
         <div className="col-span-5 row-start-2 mt-10 flex items-end gap-2 md:col-span-3" aria-label={`Projektbild ${activeIndex + 1} von ${slides.length}`}>
           {slides.map((slide, index) => <button aria-label={`Projektbild ${index + 1}: ${slide.alt}`} aria-pressed={activeIndex === index} className="flex h-4 w-4 items-center justify-center" key={slide.src} onClick={() => setActiveIndex(index)} type="button"><span className={`block h-2 w-2 rounded-full ${activeIndex === index ? "bg-ink" : "border border-ink"}`} /></button>)}
         </div>
-        <p className="project-copy col-span-7 col-start-6 row-start-2 mt-10 self-end md:col-span-3 md:col-start-10">Wir retten und verbauen bestehende Materialien für maßgefertigte Projekte.</p>
       </div>
     </section>
   );
