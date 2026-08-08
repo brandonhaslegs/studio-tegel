@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   title: { default: "Studio Tegel: Maßgefertigte Innenräume & Möbel", template: "%s | Studio Tegel" },
   description: "Designstudio und Holzwerkstatt in Berlin für maßgefertigte Innenräume und Möbel.",
   openGraph: { title: "Studio Tegel", description: "Maßgefertigte Innenräume und Möbel, entworfen und gefertigt in Berlin.", type: "website", locale: "de_DE" },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#171715",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
