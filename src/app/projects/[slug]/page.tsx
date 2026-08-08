@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Footer } from "@/components/footer";
 import { ProjectCard } from "@/components/project-card";
 import { Reveal } from "@/components/reveal";
+import { colorForProject } from "@/lib/project-colors";
 import { projectBySlug, projects } from "@/lib/site";
 
 export function generateStaticParams() { return projects.map(({ slug }) => ({ slug })); }
@@ -18,8 +19,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     <main>
       <section className="relative min-h-[75svh] bg-ink text-paper">
         <Image src={project.image} alt={project.title} fill priority sizes="100vw" className="object-cover" />
-        <div className="page-grid relative min-h-[75svh] items-end pb-8 pt-[136px]">
-          <div className="col-span-12 md:col-span-8"><p className="nav-text mb-5">{project.type}</p><h1 className="headline">{project.title}</h1></div>
+        <div className="absolute inset-x-0 bottom-0 text-ink" style={{ backgroundColor: colorForProject(project.slug) }}>
+          <div className="page-grid py-8 md:py-10">
+            <div className="col-span-12 md:col-span-8"><p className="nav-text mb-5">{project.type}</p><h1 className="headline">{project.title}</h1></div>
+          </div>
         </div>
       </section>
       <Reveal>

@@ -3,18 +3,13 @@
 import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
+import { colorForProject } from "@/lib/project-colors";
 
 type Slide = {
   alt: string;
   slug: string;
   src: string;
 };
-
-const overlayColors = ["#ff3b30", "#ff9500", "#ffd60a", "#34c759", "#0a84ff", "#af52de", "#ff2d55"];
-
-function colorForProject(slug: string) {
-  return overlayColors[[...slug].reduce((total, character) => total + character.charCodeAt(0), 0) % overlayColors.length];
-}
 
 export function HomeHeroCarousel({ slides }: { slides: Slide[] }) {
   const [activeIndex, setActiveIndex] = useState(0);
