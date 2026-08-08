@@ -62,7 +62,7 @@ export default function StudioPage() {
             <article className="grid grid-cols-8 gap-y-5 border-t border-ink/20 py-8 md:gap-y-8 md:py-10" key={principle.number}>
               <p className="nav-text col-span-1">{principle.number}</p>
               <h2 className="headline col-span-7 md:col-span-4">{principle.title}</h2>
-              <p className="project-copy col-span-7 col-start-2 text-ink/80 md:col-span-3 md:col-start-6">{principle.copy}</p>
+              <p className="project-copy col-span-7 col-start-2 mt-2 text-ink/80 md:mt-5">{principle.copy}</p>
             </article>
           ))}
         </div>
