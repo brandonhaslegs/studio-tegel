@@ -4,7 +4,7 @@ import { Reveal } from "@/components/reveal";
 export function Footer() {
   return <footer className="site-footer bg-ink text-paper">
     <Reveal className="page-grid py-24 md:py-40">
-      <div className="md:col-span-8 md:col-start-4">
+      <div className="col-span-12 md:col-span-8 md:col-start-4">
         <h2 className="headline md:max-w-[10ch]">Lass uns etwas bauen, das bleibt.</h2>
         <a className="nav-text mt-12 inline-block border-b border-paper pb-1 hover:underline" href="mailto:team@studiotegel.de">Kontakt aufnehmen</a>
         <div className="mt-10 flex flex-wrap gap-x-16 gap-y-8">
