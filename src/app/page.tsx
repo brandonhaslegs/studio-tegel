@@ -43,7 +43,6 @@ export default function Home() {
 
     <section className="bg-ink px-4 py-24 text-paper md:px-8 md:py-40">
       <div className="grid grid-cols-1 gap-14 md:grid-cols-12">
-        <p className="nav-text md:col-span-2">Projekt starten</p>
         <div className="md:col-span-8 md:col-start-4"><h2 className="headline max-w-[10ch]">Lass uns etwas bauen, das bleibt.</h2><a className="nav-text mt-12 inline-block underline underline-offset-4" href="mailto:team@studiotegel.de">Kontakt aufnehmen</a></div>
       </div>
     </section>
