@@ -16,7 +16,7 @@ export default function Home() {
         <div className="col-span-12 md:col-span-10">
           <h1 className="headline home-hero-title">Zirkuläres Bauen für die Stadt von morgen.</h1>
         </div>
-        <p className="project-copy col-span-7 col-start-6 mt-10 text-paper/80 md:col-span-3 md:col-start-10">Wir retten und verbauen bestehende Materialien für maßgefertigte Projekte.</p>
+        <p className="project-copy col-span-7 col-start-6 mt-10 text-paper md:col-span-3 md:col-start-10">Wir retten und verbauen bestehende Materialien für maßgefertigte Projekte.</p>
       </div>
     </section>
 
