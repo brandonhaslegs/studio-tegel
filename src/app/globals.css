@@ -3,7 +3,7 @@
 :root {
   --paper: #f2f0eb;
   --ink: #171715;
-  --line: rgba(23, 23, 21, 0.18);
+  --line: var(--ink);
 }
 
 @font-face {

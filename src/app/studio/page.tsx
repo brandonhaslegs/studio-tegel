@@ -59,10 +59,10 @@ export default function StudioPage() {
         <p className="nav-text col-span-12 md:col-span-2">Wie arbeiten wir</p>
         <div className="col-span-12 mt-10 md:col-span-8 md:col-start-4 md:mt-0">
           {principles.map((principle) => (
-            <article className="grid grid-cols-8 gap-y-5 border-t border-ink/20 py-8 md:gap-y-8 md:py-10" key={principle.number}>
+            <article className="grid grid-cols-8 gap-y-5 border-t border-ink py-8 md:gap-y-8 md:py-10" key={principle.number}>
               <p className="nav-text col-span-1">{principle.number}</p>
               <h2 className="headline col-span-7 md:col-span-4">{principle.title}</h2>
-              <p className="project-copy col-span-7 col-start-2 mt-2 text-ink/80 md:mt-5">{principle.copy}</p>
+              <p className="project-copy col-span-7 col-start-2 mt-2 md:mt-5">{principle.copy}</p>
             </article>
           ))}
         </div>

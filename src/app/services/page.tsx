@@ -54,18 +54,18 @@ export default function ServicesPage() {
       <section className="page-grid bg-paper py-24 md:py-40" aria-label="Leistungen im Überblick">
         <div className="col-span-12 md:col-span-8 md:col-start-4">
           {services.map((service) => (
-            <article className="grid grid-cols-8 gap-y-5 border-t border-ink/15 py-8 md:gap-y-8 md:py-10" key={service.number}>
+            <article className="grid grid-cols-8 gap-y-5 border-t border-ink py-8 md:gap-y-8 md:py-10" key={service.number}>
               <p className="nav-text col-span-1">{service.number}</p>
               <div className="col-span-7 col-start-2 space-y-5">
                 <div className="image-frame relative aspect-[5/4] overflow-hidden">
                   <Image src={service.image} alt={service.title} fill sizes="(max-width: 768px) 80vw, 58vw" className="object-cover" />
                 </div>
                 <h2 className="headline">{service.title}</h2>
-                <div className="project-copy space-y-5 text-ink/80">
+                <div className="project-copy space-y-5">
                   <p>{service.intro}</p>
                   {service.copy && <p>{service.copy}</p>}
                   {service.items && (
-                    <ul className="space-y-2 border-t border-ink/15 pt-4">
+                    <ul className="space-y-2 border-t border-ink pt-4">
                       {service.items.map((item) => <li key={item}>{item}</li>)}
                     </ul>
                   )}
