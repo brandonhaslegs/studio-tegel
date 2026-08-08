@@ -23,19 +23,9 @@ export function Navigation() {
         setPastHomeHero(Boolean(hero && hero.getBoundingClientRect().bottom <= 0));
       }
     };
-    let secondFrame = 0;
-    const firstFrame = requestAnimationFrame(() => {
-      secondFrame = requestAnimationFrame(() => {
-        updateScrolled();
-        window.addEventListener("scroll", updateScrolled, { passive: true });
-      });
-    });
-
-    setScrolled(false);
-    setPastHomeHero(false);
+    updateScrolled();
+    window.addEventListener("scroll", updateScrolled, { passive: true });
     return () => {
-      cancelAnimationFrame(firstFrame);
-      cancelAnimationFrame(secondFrame);
       window.removeEventListener("scroll", updateScrolled);
     };
   }, [pathname]);

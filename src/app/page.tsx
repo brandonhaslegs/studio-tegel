@@ -2,14 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { Footer } from "@/components/footer";
 import { HomeHeroCarousel } from "@/components/home-hero-carousel";
-import { Navigation } from "@/components/navigation";
 import { ProjectCard } from "@/components/project-card";
 import { Reveal } from "@/components/reveal";
 import { images, projects } from "@/lib/site";
 
 export default function Home() {
   return <main className="overflow-hidden">
-    <Navigation />
     <HomeHeroCarousel slides={projects.map((project) => ({ src: project.image, alt: project.title, slug: project.slug }))} />
 
     <Reveal>

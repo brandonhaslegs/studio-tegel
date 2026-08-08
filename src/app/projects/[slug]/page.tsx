@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Footer } from "@/components/footer";
-import { Navigation } from "@/components/navigation";
 import { ProjectCard } from "@/components/project-card";
 import { Reveal } from "@/components/reveal";
 import { projectBySlug, projects } from "@/lib/site";
@@ -17,7 +16,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   const otherProjects = projects.filter(({ slug: projectSlug }) => projectSlug !== project.slug);
   return (
     <main>
-      <Navigation />
       <section className="relative min-h-[75svh] bg-ink text-paper">
         <Image src={project.image} alt={project.title} fill priority sizes="100vw" className="object-cover" />
         <div className="page-grid relative min-h-[75svh] items-end pb-8 pt-[136px]">
