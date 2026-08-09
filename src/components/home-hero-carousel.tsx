@@ -33,7 +33,7 @@ export function HomeHeroCarousel({ slides }: { slides: Slide[] }) {
         </AnimatePresence>
       </div>
       <div className="page-grid relative min-h-[75svh] grid-rows-[1fr_auto] pb-7 pt-28 md:pb-10">
-        <div className="col-span-12 row-start-1 self-center md:col-span-10">
+        <div className="col-span-12 row-start-1 self-center md:col-span-9 md:col-start-3 2xl:col-span-10 2xl:col-start-1">
           <h1 className="headline home-hero-title">Zirkuläres Bauen für die Stadt von morgen.</h1>
           <p className="project-copy mt-8 max-w-md">Wir retten und verbauen bestehende Materialien für maßgefertigte Projekte.</p>
         </div>
