@@ -28,7 +28,7 @@ const services = [
   {
     number: "03",
     title: "Upcycling-Workshops",
-    image: "/images/legacy/8d0444fd-10c2-4a04-ae7a-7da8c7128a42-Individuelle-Einzigartige-Ma%C3%9Fgefertigte-Kunstwerke-aus-Holz-Studio-Tegel.JPG",
+    image: "/images/legacy/8d0444fd-10c2-4a04-ae7a-7da8c7128a42-Individuelle-Einzigartige-Massgefertigte-Kunstwerke-aus-Holz-Studio-Tegel.JPG",
     intro: "Du hast Freude am Designen und Bauen? Dann melde dich für unseren Workshop an.",
     copy: "Unter professioneller Anleitung entstehen aus Holzresten unserer Tischlerei eigene Kunstwerke.",
     items: [
